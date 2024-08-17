@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+void main ()
+{
+   int num,guess,tries=0;
+   srand(time(0));
+   num=rand()%100+1;
+   printf("guess my number game lucky!\n\n");
+   do
+   {
+      printf("enter a guess between 1 and 1oo lucky :");
+      scanf("%d",&guess);
+      tries++;
+      
+      if(guess>num)
+      {
+         printf("Too high!\n");
+      }
+      else if (guess<num)
+      {
+         printf("Too low!\n\n");
+      }
+      else
+      {
+         printf("\nlucky you got it!\n YOU ARE LUCKY!\n totally%d guesses\n",tries);
+      }
+   }while(guess !=num);
+}
